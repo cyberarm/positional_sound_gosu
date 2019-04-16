@@ -27,7 +27,7 @@ class Window < Gosu::Window
 
     @listener.sources.each_with_index do |source, index|
       @font.draw_text(
-        "#{source.class}[#{index}] volume: #{(source.volume * 100).round(2)}% pan: #{source.pan.round(2)} speed: #{source.speed}",
+        "#{source.class}[#{index}] volume: #{(source.volume * 100).round(2)}% pan: #{source.pan.round(8)} speed: #{source.speed}",
         10, 10 + (@font.height * index), 1)
     end
   end

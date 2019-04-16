@@ -43,20 +43,20 @@ class Listener < GameObject
       source.pan = rand(-10.0..10.0)
       if _angle.between?(0, 180) # source is in front of listener
         if _angle <= 90
-          pan = (((-_angle / 90.to_f) + 1) * -1) * 0.08
+          pan = (((-_angle / 90.to_f) + 1) * -1) * 0.00000005
           source.pan =  pan
         else
-          pan = (((-_angle / 90.to_f) + 1) * -1) * 0.08
+          pan = (((-_angle / 90.to_f) + 1) * -1) * 0.00000005
           source.pan =  pan
         end
       else # source is behind listener
         # tweak speed to make it 'feel' behind?
         _angle -= 180
         if _angle <= 90
-          pan = ((-_angle / 90.to_f) + 1) * 0.1
+          pan = ((-_angle / 90.to_f) + 1) * 0.00000005
           source.pan =  pan
         else
-          pan = ((-_angle / 90.to_f) + 1) * 0.1
+          pan = ((-_angle / 90.to_f) + 1) * 0.00000005
           source.pan =  pan
         end
       end
